@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:8000',
+        target: 'https://tech-solutions-lgi4.onrender.com:10000',
         changeOrigin: true,
       },
     },
