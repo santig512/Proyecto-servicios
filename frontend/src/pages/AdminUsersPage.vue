@@ -37,33 +37,35 @@
       </form>
       <p v-if="loading" class="muted">{{ t('adminUsers.loading') }}</p>
       <p v-if="error" class="muted">{{ error }}</p>
-      <table class="table" v-if="users.length">
-        <thead>
-          <tr>
-            <th>{{ t('adminUsers.headerName') }}</th>
-            <th>{{ t('adminUsers.headerEmail') }}</th>
-            <th>{{ t('adminUsers.headerRole') }}</th>
-            <th>{{ t('adminUsers.headerState') }}</th>
-            <th>{{ t('adminUsers.headerActions') }}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="u in users" :key="u.id">
-            <td>{{ u.first_name }} {{ u.last_name }}</td>
-            <td>{{ u.email }}</td>
-            <td><span class="badge">{{ roleLabel(u.role) }}</span></td>
-            <td>
-              <span class="badge" :class="u.is_active ? '' : 'muted'">
-                {{ u.is_active ? t('adminUsers.activeState') : t('adminUsers.inactiveState') }}
-              </span>
-            </td>
-            <td>
-              <button class="btn secondary" type="button" @click="editUser(u)">{{ t('adminUsers.edit') }}</button>
-              <button class="btn secondary" style="margin-left: 0.5rem;" type="button" @click="deleteUser(u)">{{ t('adminUsers.delete') }}</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div v-if="users.length" class="table-scroll">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>{{ t('adminUsers.headerName') }}</th>
+              <th>{{ t('adminUsers.headerEmail') }}</th>
+              <th>{{ t('adminUsers.headerRole') }}</th>
+              <th>{{ t('adminUsers.headerState') }}</th>
+              <th>{{ t('adminUsers.headerActions') }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="u in users" :key="u.id">
+              <td>{{ u.first_name }} {{ u.last_name }}</td>
+              <td>{{ u.email }}</td>
+              <td><span class="badge">{{ roleLabel(u.role) }}</span></td>
+              <td>
+                <span class="badge" :class="u.is_active ? '' : 'muted'">
+                  {{ u.is_active ? t('adminUsers.activeState') : t('adminUsers.inactiveState') }}
+                </span>
+              </td>
+              <td>
+                <button class="btn secondary" type="button" @click="editUser(u)">{{ t('adminUsers.edit') }}</button>
+                <button class="btn secondary" style="margin-left: 0.5rem;" type="button" @click="deleteUser(u)">{{ t('adminUsers.delete') }}</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 </template>

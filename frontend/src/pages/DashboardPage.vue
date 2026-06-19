@@ -29,7 +29,8 @@
       <p v-if="error" class="muted" style="margin-top: 0.75rem;">{{ error }}</p>
       <p v-if="saveMessage" class="muted" style="margin-top: 0.75rem;">{{ saveMessage }}</p>
 
-      <table v-if="services.length" class="table" style="margin-top: 1rem;">
+      <div v-if="services.length" class="table-scroll" style="margin-top: 1rem;">
+        <table class="table">
         <thead>
           <tr>
             <th>{{ t('dashboard.service') }}</th>
@@ -84,7 +85,8 @@
             </td>
           </tr>
         </tbody>
-      </table>
+        </table>
+      </div>
 
       <div v-else-if="!loading" class="muted" style="margin-top: 1rem;">
         {{ t('dashboard.empty') }}
