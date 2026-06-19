@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 140" role="img" aria-labelledby="title desc">
+  <title>24HR Tech Solutions</title>
+  <desc>Orange technical icon with blue brand text.</desc>
+  <rect width="560" height="140" fill="none"/>
+  <g transform="translate(16 14)">
+    <path d="M42 18h40v18H42z" fill="#f56e11"/>
+    <path d="M62 34c-20 0-36 16-36 36s16 36 36 36 36-16 36-36-16-36-36-36zm0 12c13.255 0 24 10.745 24 24S75.255 94 62 94 38 83.255 38 70s10.745-24 24-24z" fill="#f56e11"/>
+    <path d="M49 62l13-13 13 13v24H49z" fill="none" stroke="#082756" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M55 73h6v10h-6zm12 0h6v10h-6z" fill="#082756"/>
+    <path d="M61 18h2v14h-2zm0 60h2v14h-2z" fill="#f56e11"/>
+  </g>
+  <g transform="translate(135 41)" fill="#082756">
+    <text x="0" y="48" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="900" letter-spacing="-1">24HR</text>
+    <text x="4" y="86" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="800" letter-spacing="4" fill="#082756">TECH SOLUTIONS</text>
+  </g>
+</svg>
